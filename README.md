@@ -3,6 +3,9 @@ Data Analytics Project for Real Estate
 Plans:
 1. Data Visualization for Melbourne Housing (Easy)
     - Data exploratory on tableau and streamlit
+        - Country Area against Price: find the increment in price over time over against each region. Find out which region in which constantly has higher price. Find if the number of rooms affect
+        - House area against price: rooms against price, carpark against price, landsize against price. bedrooms2-rooms(partition room) against price
+    
     - Embed tableau dashboard on github
 
 2. Time Series Analysis (Average
