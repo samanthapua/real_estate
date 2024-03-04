@@ -11,7 +11,11 @@ Plans:
 2. Time Series Analysis (Average)
    - To explore and analyze/intepret patterns in time-ordered data to explain trends and seasonality. 
    - Implement time series forecasting - using statistical model to predict future values of a time-series based on past results
-   - ARIMA model
+   - Conduct ADCF Test - test to see if data is stationary
+   - ARIMA model (AR- Auto Regressive,I - Integration, MA - Moving Average)
+     - AR: correlation between previous time period and current time period. P = autoregressive lags
+     - I: d = order of differentiation
+     - MA: Q = moving
 Components in TSA:
    - Trend - general direction of time series data over a long period of time i.e. Increasing (upwards), Decreasing (downwards), Horizontal (stationary)
    - Seasonality - trend that repeats w.r.t to timing, direction and magnitude
