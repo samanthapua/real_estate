@@ -1,11 +1,9 @@
 Data Analytics Project for Real Estate
 
-Plans:
 1. Data Visualization for Melbourne Housing (Easy)
     - Data exploratory on tableau and streamlit
-        - Country Area against Price: find the increment in price over time over against each region. Find out which region in which constantly has higher prices
-        - House area against price: rooms against price, carpark against price, landsize against price. bedrooms2-rooms(partition room) against price
-    
+        - Country Area against Price: Find the increment in price over time over against each region, list the regions that constantly has higher prices
+        - House Area against Price: Plot rooms against price, carpark against price, landsize against price. bedrooms2-rooms(partition room) against price
     - Embed tableau dashboard on github 
 
 2. Time Series Analysis (Average)
@@ -22,9 +20,34 @@ Components in TSA:
    - Cyclical Component - no set repetition over a particular period of time
    - Irregular Variation - trend and cyclical variations are removed, variations are unpredictable, erratic and may/may not be random
    - ETS Decomposition - Error, Trend, Seasonality
+Performing TSA
+a. To test for stationary - conduct Dickey-Fuller test
+```
+from statsmodels.tsa.stattools import adfuller
+dftest = adfuller(Datasets[column_to_test_stationary],autolag='AIC')
+dfoutput = pd.Series(dftest[0:4],index=['Test Statistic','p-value','# of Lags Used','# of Observations Used'])
+for key,value in dftest[4].items():
+    dfoutput['Critical Value (%s)'$%key]=value
+print(dfoutput)
+```
+b. To estimate trend
+```
+log_df = np.log(indexDataset)
+# X to be determine and same as test for stationary
+movingAverage = log_df.rolling(window=X).mean()
+movingSTD = log_df.rolling(window=X).std()
 
+```
+3. Time Series Forecasting with XGBoost (Hard)
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import xgboost as xgb
+```
 
-3. Predictive Modeling (Hard)
+4. Predictive Modeling (Hard)
 Use Python with scikit-learn or TensorFlow/PyTorch to build a predictive model for housing prices.
 Evaluate different regression algorithms and choose the one with the best performance.
 
