@@ -22,4 +22,10 @@ test.plot(ax=ax,label='Test Set',y='Price')
 plt.show()
 
 """Feature Creation"""
-a
+18Mar - Finish tutorial
+19Mar - gym + poker
+20Mar - coding + swimming + gym
+21Mar - office + coding
+22Mar - office(?)/malaysia(?)
+23Mar - bball
+
